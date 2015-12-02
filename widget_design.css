@@ -1,0 +1,53 @@
+.portrait{
+	background-image: linear-gradient(to bottom right, rgb(0,64,128), rgb(0,128,192) 100%);
+}
+
+#date{
+	font-family: Verdana;
+	font-size: 35px;
+	margin: 10px 15px 0px 15px;
+}
+
+#day{
+	font-family: Candara;
+	font-size: 20px;
+	margin: -38px 15px 0px 250px;
+}
+
+#tasks_today{
+	font-family: monospace;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 10px;
+	border: 1px solid;
+}
+
+#v_line{
+	border-left: medium solid;
+	margin: 5px 0px 0px 15px;
+	color: rgb(192,24,50);
+}
+
+.v1{
+	height: 60px;
+}
+
+.v2{
+	height: 70px;
+}
+
+.v3{
+	height: 50px;
+}
+
+#notif_bar{
+	width: 358px;
+	margin: 0px;
+}
+
+#footer_bar{
+	width: 358px;
+	height: 43px;
+	margin-top: 3px;
+}
