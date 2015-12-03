@@ -19,3 +19,23 @@ function updateclock(){
 }
 
 requestAnimationFrame(updateclock);
+
+
+var notif = "close";
+
+$(".notif-area").click(function(){
+	$(this).animate({
+		height: "100%"
+	}, 500);
+	$(".notif-area span").hide();
+});
+
+
+
+
+$(document).ready(function() {
+    $('html, body, *').mousewheel(function(e, delta) {
+        this.scrollLeft -= (delta * 40);
+        e.preventDefault();
+    });
+});

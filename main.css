@@ -3,16 +3,82 @@
     -ms-transform: scale(0.9); /* IE 9 */
     -webkit-transform: scale(0.9); /* Safari and Chrome */
     -o-transform: scale(0.9); /* Firefox */
+    width: 2000px;
+	overflow-y: hidden;
+	overflow-x: auto;
 }
 
 .portrait {
 	height: 640px;
 	width: 360px;
 	border: 1px solid #000000;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 2px;
+	float: left;
+	position: relative;
 }
 
 .fLeft{
 	float: left;
 }
+
+.landscape {
+	position: relative;
+	width: 640px;
+	height: 360px;
+	border: 1px solid #000000;
+	margin: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
+}
+
+#buffer {
+	height: 100px;
+}
+
+.notif-area {
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#wrapper {
+	position: relative;
+}
+
+#scrollable {
+	height: 340px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: 20px;
+}
+
+#grid {
+	width: calc(100% + 15px);
+}
+
+#grid tr td{
+	padding: 0;
+	border: 1px solid gray;
+	width: calc(100%/8);
+	text-align: center;
+}
+
+#grid thead tr th {
+	padding: 0;
+}
+
+#grid thead tr th .text{
+	border: 1px solid gray;
+	padding: 0;
+	position: absolute;
+	width: calc(100%/8);
+	height: 20px;
+	z-index: 2;
+	top: -20px;
+	text-align: center;
+}
+
