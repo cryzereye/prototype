@@ -31,11 +31,7 @@ $(".notif-area").click(function(){
 });
 
 
-
-
-$(document).ready(function() {
-    $('html, body, *').mousewheel(function(e, delta) {
-        this.scrollLeft -= (delta * 40);
-        e.preventDefault();
-    });
+$(".schedcell").click(function(){
+    $(this).css("background-color", "#0000ff");
+    $(this).css("border", "0px solid white");
 });

@@ -3,9 +3,11 @@
     -ms-transform: scale(0.9); /* IE 9 */
     -webkit-transform: scale(0.9); /* Safari and Chrome */
     -o-transform: scale(0.9); /* Firefox */
-    width: 2000px;
-	overflow-y: hidden;
-	overflow-x: auto;
+    width: 1400px;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 .portrait {
@@ -15,6 +17,7 @@
 	margin: 2px;
 	float: left;
 	position: relative;
+	z-index: 3;
 }
 
 .fLeft{
@@ -27,9 +30,8 @@
 	height: 360px;
 	border: 1px solid #000000;
 	margin: 2px;
-	margin-left: auto;
-	margin-right: auto;
 	float: left;
+	z-index: 3;
 }
 
 #buffer {
@@ -57,7 +59,7 @@
 }
 
 #grid {
-	width: calc(100% + 15px);
+	max-width: calc(100% + 15px);
 }
 
 #grid tr td{
@@ -65,14 +67,17 @@
 	border: 1px solid gray;
 	width: calc(100%/8);
 	text-align: center;
+	height:	30px;
+
 }
 
 #grid thead tr th {
 	padding: 0;
+
 }
 
 #grid thead tr th .text{
-	border: 1px solid gray;
+	/*border: 1px solid #eeeeee;*/
 	padding: 0;
 	position: absolute;
 	width: calc(100%/8);
@@ -80,5 +85,12 @@
 	z-index: 2;
 	top: -20px;
 	text-align: center;
+	background-color: #ef5350;
+	color: #ffffff;
 }
 
+
+.schedcell{
+	background-color: #ffffff;
+	border-radius: 0;
+}
