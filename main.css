@@ -94,3 +94,16 @@
 	background-color: #ffffff;
 	border-radius: 0;
 }
+
+#addtask {
+	position: absolute;
+	z-index: 5;
+	width: 200px;
+	height: 70px;
+	background-color: #ffebee ;
+	color: black;
+}
+
+.selected {
+	background-color: #b71c1c;
+}

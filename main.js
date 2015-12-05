@@ -30,8 +30,37 @@ $(".notif-area").click(function(){
 	$(".notif-area span").hide();
 });
 
+var rect;
+
+$("#addtask").hide();
+
+var task = "close";
 
 $(".schedcell").click(function(){
-    $(this).css("background-color", "#0000ff");
-    $(this).css("border", "0px solid white");
+	
+	$("#addtask").css("left", " " + 0);
+	$("#addtask").css("right", " " + 0);
+
+
+	if(task == "close"){
+		rect = this.getBoundingClientRect();
+		if(rect.left < 1000){
+			$("#addtask").css("left", " " + (rect.left + 150));
+		} else {
+			$("#addtask").css("right", " " + (rect.right));
+		}
+
+		$("#addtask").css("top", " " + (rect.top - 40));
+		$("#addtask").fadeIn();
+		task ="open";
+		$(this).addClass("selected");
+	} else {
+		$("#addtask").fadeOut();
+		task = "close";
+		$(".selected").removeClass("selected");
+	}
 });
+
+
+// :eq - select
+// .index - get
