@@ -23,12 +23,41 @@ requestAnimationFrame(updateclock);
 
 var notif = "close";
 
+/* Notification Module Animation 
+	- allows users to slide the notif bar (by clicking the
+	notif bar) and shows BYTES notif to user
+*/
+var notif_opened = true;	// flag for checking if the notif bar is slided down
+
+$(".notif-area #notif_bar").hide();
+$(".notif-area #span2").hide();
+
 $(".notif-area").click(function(){
-	$(this).animate({
-		height: "100%"
-	}, 500);
-	$(".notif-area span").hide();
+	if(notif_opened){	// if user wants to slide down the notif bar
+		$(".notif-area span").hide();
+		$("#bg_photo").fadeOut(200);
+		$("#footer_bar").fadeOut(200);
+		$(this).animate({
+			height: "100%"
+		}, 500);
+		$(".notif-area #notif_bar").show();
+		$(".notif-area #span2").show();
+		notif_opened = false;
+	}
+	else{	// if user closes the notif bar
+		$(".notif-area #notif_bar").hide();
+		$(".notif-area #span2").hide();
+		$(this).animate({
+			height: "20px"
+		}, 500);
+		$(".notif-area span").show();
+		$("#bg_photo").fadeIn(500);
+		$("#footer_bar").fadeIn(500);
+		notif_opened = true;
+	}
 });
+
+// end of notif animation
 
 var rect;
 

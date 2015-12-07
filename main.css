@@ -47,6 +47,33 @@
     padding-right: 10px;
 }
 
+.notif-area #span2 {
+	background-color: rgb(41,41,41);
+	margin-left: -10px;
+	margin-right: -10px;
+	padding: 5px;
+}
+
+#notif_bar{
+	width: 358px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#bg_photo{
+	width: 358px;
+	height: 572px;
+	margin-top: 3px;
+}
+
+#footer_bar{
+	width: 358px;
+	height: 43px;
+	margin-top: 3px;
+}
+
 #wrapper {
 	position: relative;
 }
